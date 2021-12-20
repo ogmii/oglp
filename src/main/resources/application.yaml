@@ -7,3 +7,7 @@ spring:
   mustache:
     prefix: classpath:/templates/
     suffix: .mustache
+og:
+  lp:
+    artist:
+      csv-path: artists.csv

@@ -1,4 +1,6 @@
 package com.og.lp.module.record.service
 
-interface RecordRepository {
-}
+import com.og.lp.module.record.entity.Record
+import org.springframework.data.repository.CrudRepository
+
+interface RecordRepository : CrudRepository<Record, Long>

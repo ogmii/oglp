@@ -13,7 +13,7 @@ class RecordResponseService(private val recordService : RecordService) {
 
 	fun getRecord(model: Model, id: Long) {
 		val record = recordService.findById(id)
-		model["title"] = record.getTitle()
+//		model["title"] = record.getTitle()
 		model["record"] = record
 	}
 
