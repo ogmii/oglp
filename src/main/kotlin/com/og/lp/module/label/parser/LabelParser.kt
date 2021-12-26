@@ -1,16 +1,16 @@
-package com.og.lp.module.artist.parser
+package com.og.lp.module.label.parser
 
 
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
-import com.og.lp.module.artist.entity.Artist
-import com.og.lp.module.artist.service.ArtistRepository
+import com.og.lp.module.label.entity.Label
+import com.og.lp.module.label.service.LabelRepository
 import mu.KotlinLogging
 import org.springframework.stereotype.Component
 import java.io.File
 import java.io.IOException
 
 @Component
-class ArtistParser(private val artistRepository: ArtistRepository) {
+class LabelParser(private val labelRepository: LabelRepository) {
 
 	private val logger = KotlinLogging.logger {}
 
@@ -23,21 +23,21 @@ class ArtistParser(private val artistRepository: ArtistRepository) {
 	fun parse(name: String) {
 		try {
 			csvReader().readAllWithHeader(File(name)).forEach { row: Map<String, String> ->
-				val name = row[Column.ARTIST.column] ?: throw IllegalArgumentException()
+				val label = row[Column.LABEL.column] ?: throw IllegalArgumentException();
 
-				artistRepository.findByName(name) ?: artistRepository.save(
-					Artist(
-						name = name,
+				labelRepository.findByName(label) ?: labelRepository.save(
+					Label(
+						name = label,
 						sort = row[Column.SORT.column].orEmpty()
 					)
 				)
 			}
 		} catch (e: Exception) {
-			logger.error { "Error while parsing error, error: ${e.message}" }
+			logger.error { "Error while parsing labels, error: ${e.message}" }
 		}
 	}
 
 	enum class Column(val column: String) {
-		ARTIST("name"), SORT("alphabet_sort")
+		LABEL("name"), SORT("alphabet_sort")
 	}
 }

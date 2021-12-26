@@ -11,3 +11,7 @@ og:
   lp:
     artist:
       csv-path: artists.csv
+    label:
+      csv-path: labels.csv
+    record:
+      csv-path: records.csv

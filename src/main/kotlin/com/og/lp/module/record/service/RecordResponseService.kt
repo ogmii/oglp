@@ -5,7 +5,7 @@ import org.springframework.ui.Model
 import org.springframework.ui.set
 
 @Service
-class RecordResponseService(private val recordService : RecordService) {
+class RecordResponseService(private val recordService: RecordService) {
 
 	fun getIndex(model: Model) {
 		model["title"] = "OG LP"

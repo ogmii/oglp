@@ -1,13 +1,11 @@
 package com.og.lp.module.record.entity
 
-
 import com.og.lp.module.artist.entity.Artist
 import com.og.lp.module.label.entity.Label
 import org.hibernate.annotations.CreationTimestamp
 import java.time.Instant
 import javax.persistence.*
 import javax.validation.constraints.NotNull
-
 
 @Entity
 class Record(
@@ -16,7 +14,7 @@ class Record(
 	@NotNull @ManyToOne val artist: Artist,
 	val releaseYear: Long?,
 	val catalogNumber: String?,
-	@NotNull @Enumerated(EnumType.STRING) val format: Format,
+	@NotNull @OneToOne val format: Format,
 	val variant: String?,
 	val comment: String?,
 	val coverFront: String?,
@@ -27,7 +25,5 @@ class Record(
 	@ManyToOne val label: Label,
 	@CreationTimestamp val created: Instant
 ) {
-	enum class Format {
-		NORTH, SOUTH, WEST, EAST
-	}
+
 }
