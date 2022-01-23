@@ -228,6 +228,7 @@ class DiscogsRecordResponse()
 		"width": 600,
 		"height": 594
 	},
+
 	{
 		"type": "secondary",
 		"uri": "https://i.discogs.com/MhSui__MLapQcS9XJFyVWO8rTFjyuCe6HgwC99ZJY0o/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWltYWdlcy9SLTM2/NDEyMzQtMTYyMDY1/MjQzMS05MTEwLmpw/ZWc.jpeg",
