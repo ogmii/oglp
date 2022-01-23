@@ -1,4 +1,4 @@
-name,artist,release_year,catalog_number,format,variant,comment,cover_front,cover_back,discogs_relase_id,alphabet_sort,owned,label
+name,artist,release_year,catalog_number,format,variant,comment,cover_front,cover_back,discogs_release_id,alphabet_sort,owned,label
 Vaya,At The Drive-In,2012,F040-1,"10"" vinyl",pink,limited to 3000 pcs.,,,3641234,T,1,Rodriguez Lopez Productions
 Diamanté,At The Drive-In,2017,RISE-394,"10"" vinyl",green clear with bone splatter,limited to 3000 pcs.,,,11188685,W,1,Maverick
 Live at Clouds Hill,Bosnian Rainbows,2019,CH051,"10"" vinyl",black,,,,13856875,D,1,Columbia
@@ -25,7 +25,7 @@ Telesterion,Omar Rodriguez Lopez,2011,RLP021,4x vinyl,black,"box-set, incudes to
 Insane in the Brain,Cypress Hill,2020,MRB7182,"7"" vinyl",glow in dark,,,,15904292,M,1,Mochilla
 Pyramid Mirrors,Anywhere,2011,VKR 705,"7"" vinyl",black,"includes sticker, hand numbered",,,3253795,S,1,Mochilla
 Infrared Moses,Anywhere,2012,VKR 706,"7"" vinyl",black,"includes sticker, hand numbered",,,3473533,B,1,Harvest
-,Inventa Storca,2005,YS011CD,pamětní deska,pamětní deska,pamětní deska,,,7326831,N,1,Harvest
+Inventa Storca,Inventa Storca,2005,YS011CD,pamětní deska,pamětní deska,pamětní deska,,,7326831,N,1,Harvest
 Dlouhohrající Děcka,J.A.R.,2011,88697913681,vinyl,black,,,,3405292,T,1,Suicide Squueze Records
 Who Do You Think You Aren't?,Robby Moncrieff,2010,PRLP-014,vinyl,black,,,,3061125,T,1,Suicide Squueze Records
 Beat Music! Beat Music! Beat Music!,Mark Guiliana,2019,MTM0324,vinyl,yellow,includes poster,,,14074278,I,1,Motéma
@@ -95,4 +95,4 @@ Pompette,Suff Daddy,2020,JAKARTA147,vinyl,yellow,limited to 250 pcs.,,,14858770,
 The Gin Diaries,Suff Daddy,2010,MPM091,vinyl,black,,,,2230645,P,1,JAKARTA
 Compassion,Royal Coda,2019,,vinyl,blue,limited to 250 pcs.,,,14431102,G,1,Melting Pot Music
 Flying Microtonal Banana (Explorations Into Microtonal Tuning Volume 1),King Gizzard and the Lizard Wizard,2021,FLT-028,vinyl,radioactive yellow,,,,18310771,C,1,Blue Swan Records
-Ploy,Ploy,2019,CK038-1,vinyl ,black,,,,16126912,F,1,ATO Records
+Ploy,Ploy,2019,CK038-1,vinyl ,black,,,,16126912,P,1,Červený Kůň

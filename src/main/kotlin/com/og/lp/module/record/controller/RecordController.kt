@@ -4,6 +4,7 @@ import com.og.lp.module.record.service.RecordResponseService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 
 @Controller
 class RecordController(private val recordResponseService: RecordResponseService) {
@@ -15,8 +16,11 @@ class RecordController(private val recordResponseService: RecordResponseService)
 	}
 
 	@GetMapping("/{id}")
-	fun index(model: Model, id: Long): String {
-		recordResponseService.getRecord(model, id)
+	fun detail(
+		@PathVariable id: Long,
+		model: Model
+	): String {
+		recordResponseService.findById(model, id)
 		return "record/detail"
 	}
 }

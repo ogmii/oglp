@@ -89,10 +89,10 @@ class RecordParser(
 	}
 
 	enum class Column(val column: String) {
-		TITLE("title"),
+		TITLE("name"),
 		ARTIST("artist"),
 		RELEASE_YEAR("release_year"),
-		CATALOG_NUMBER("catalogue_number"),
+		CATALOG_NUMBER("catalog_number"),
 		FORMAT("format"),
 		VARIANT("variant"),
 		COMMENT("comment"),

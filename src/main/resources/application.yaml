@@ -7,6 +7,18 @@ spring:
   mustache:
     prefix: classpath:/templates/
     suffix: .mustache
+discogs:
+  token: LfhZPwAmjAYtsuBALCYvaYEQRiRvHkmUguaDkzSP
+  user-name: drsnejridic
+  url:
+    base-url: https://api.discogs.com
+    collection-value: /users/%s/collection/value
+    record-detail: /releases/%s
+
+rest-template:
+  connection-timeout-ms: 3000
+  read-timeout-ms: 3000
+
 og:
   lp:
     artist:

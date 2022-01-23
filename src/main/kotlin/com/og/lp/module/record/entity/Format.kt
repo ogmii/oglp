@@ -8,6 +8,6 @@ import javax.validation.constraints.NotNull
 
 @Entity
 class Format(
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long? = null,
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long = 0,
 	@NotNull val format: String
 )
