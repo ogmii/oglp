@@ -1,8 +1,8 @@
 package com.og.lp.integration.discogs.service
 
-import com.og.lp.integration.discogs.dto.DiscogsCollectionResponse
-import com.og.lp.integration.discogs.dto.DiscogsResponse
-import com.og.lp.integration.discogs.dto.DiscogsRecordResponse
+import com.og.lp.integration.discogs.dto.response.DiscogsCollectionResponse
+import com.og.lp.integration.discogs.dto.response.DiscogsResponse
+import com.og.lp.integration.discogs.dto.response.DiscogsRecordResponse
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate

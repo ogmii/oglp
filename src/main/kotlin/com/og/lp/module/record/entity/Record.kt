@@ -1,9 +1,8 @@
 package com.og.lp.module.record.entity
 
-import com.og.lp.integration.discogs.dto.DiscogsRecordResponse
-import com.og.lp.integration.discogs.dto.DiscogsResponse
 import com.og.lp.module.artist.entity.Artist
 import com.og.lp.module.label.entity.Label
+import com.og.lp.module.record.dto.RecordView
 import org.hibernate.annotations.CreationTimestamp
 import java.time.Instant
 import javax.persistence.*
@@ -31,10 +30,26 @@ class Record(
 		return coverFront != null && coverBack != null
 	}
 
-	fun withCovers(record: DiscogsRecordResponse) : Record {
-		coverFront = record.frontCover
-		coverBack = record.backCover
+	fun withCovers(coverFront: String?, coverBack: String?): Record {
+		this.coverFront = coverFront
+		this.coverBack = coverBack
 
 		return this
 	}
+
+	fun getWebTitle(): String {
+		return "$title ($releaseYear) - ${artist.name}"
+	}
+
+	fun toRecordView() = RecordView(
+		id = id,
+		title = title,
+		artist = artist.name,
+		artistId = artist.id,
+		releaseYear = releaseYear,
+		format = format.format,
+		coverFront = coverFront,
+		coverBack = coverBack,
+		label = label.name
+	)
 }

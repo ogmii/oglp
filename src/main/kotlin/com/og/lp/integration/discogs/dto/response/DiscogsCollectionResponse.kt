@@ -1,4 +1,4 @@
-package com.og.lp.integration.discogs.dto
+package com.og.lp.integration.discogs.dto.response
 
 class DiscogsCollectionResponse(
 	val maximum: String,
