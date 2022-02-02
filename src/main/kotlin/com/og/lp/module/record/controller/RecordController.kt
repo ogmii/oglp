@@ -15,7 +15,7 @@ class RecordController(private val recordResponseService: RecordResponseService)
 		return "index"
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/record/{id}")
 	fun detail(
 		@PathVariable id: Long,
 		model: Model

@@ -10,7 +10,8 @@ class RecordResponseService(
 ) {
 
 	fun getIndex(model: Model) {
-		model["title"] = "OG LP"
+		model["webTitle"] = "OG LP"
+		model["hottestRecords"] = recordService.findHottestRecords()
 	}
 
 	fun findById(model: Model, id: Long) {

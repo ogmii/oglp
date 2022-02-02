@@ -14,6 +14,21 @@ class RecordService(private val recordRepository: RecordRepository, private val 
 	fun findById(id: Long): Record {
 		val record = recordRepository.findByIdOrNull(id) ?: throw NotFoundException(Module.RECORD, id)
 
+		updateCover(record)
+
+		return record
+	}
+
+	fun findHottestRecords(): List<Record> {
+		val records = recordRepository.findHottestRecords()
+
+		records.filter { r -> !r.hasCover() && r.discogsId != null }
+			.map { updateCover(it) }
+
+		return records
+	}
+
+	fun updateCover(record: Record) {
 		if (!record.hasCover() && record.discogsId != null) {
 			discogsService.findRecordById(record.discogsId)?.let {
 				recordRepository.save(
@@ -24,8 +39,6 @@ class RecordService(private val recordRepository: RecordRepository, private val 
 				)
 			}
 		}
-
-		return record
 	}
 
 }

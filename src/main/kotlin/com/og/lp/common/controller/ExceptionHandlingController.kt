@@ -1,4 +1,4 @@
-package com.og.lp.common.config
+package com.og.lp.common.controller
 
 import com.og.lp.common.exception.NotFoundException
 import org.springframework.web.bind.annotation.ControllerAdvice
@@ -12,7 +12,6 @@ class ExceptionHandlingController() {
 
 	@ExceptionHandler(NotFoundException::class)
 	fun handleError(req: HttpServletRequest, ex: NotFoundException): ModelAndView {
-		ex.module.screenName
 		return ModelAndView("error/404")
 			.addObject("exception", ex)
 			.addObject("webTitle", "${ex.module.screenName} not found")

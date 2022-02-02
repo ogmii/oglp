@@ -41,15 +41,22 @@ class Record(
 		return "$title ($releaseYear) - ${artist.name}"
 	}
 
+	private fun getHeading(): String {
+		return "$title ($releaseYear)"
+	}
+
 	fun toRecordView() = RecordView(
 		id = id,
-		title = title,
+		heading = getHeading(),
 		artist = artist.name,
 		artistId = artist.id,
 		releaseYear = releaseYear,
 		format = format.format,
 		coverFront = coverFront,
 		coverBack = coverBack,
-		label = label.name
+		label = label.name,
+		comment = comment,
+		variant = variant,
+		catalogueNumber = catalogNumber
 	)
 }
