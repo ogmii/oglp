@@ -15,12 +15,18 @@ class RecordController(private val recordResponseService: RecordResponseService)
 		return "index"
 	}
 
+	@GetMapping("/collection")
+	fun collection(model: Model): String {
+		recordResponseService.getCollection(model)
+		return "collection"
+	}
+
 	@GetMapping("/record/{id}")
 	fun detail(
 		@PathVariable id: Long,
 		model: Model
 	): String {
 		recordResponseService.findById(model, id)
-		return "record/detail"
+		return "detail"
 	}
 }

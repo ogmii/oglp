@@ -4,12 +4,17 @@ import com.og.lp.common.exception.Module
 import com.og.lp.common.exception.NotFoundException
 import com.og.lp.integration.discogs.service.DiscogsService
 import com.og.lp.module.record.entity.Record
+import com.og.lp.module.statistics.entity.CollectionValue
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 
 
 @Service
-class RecordService(private val recordRepository: RecordRepository, private val discogsService: DiscogsService) {
+class RecordService(
+	private val recordRepository: RecordRepository,
+	private val discogsService: DiscogsService,
+	private val collectionRepository: CollectionRepository
+) {
 
 	fun findById(id: Long): Record {
 		val record = recordRepository.findByIdOrNull(id) ?: throw NotFoundException(Module.RECORD, id)
@@ -39,6 +44,10 @@ class RecordService(private val recordRepository: RecordRepository, private val 
 				)
 			}
 		}
+	}
+
+	fun getCollection(): List<CollectionValue> {
+		return collectionRepository.findTop12OrderByCreated()
 	}
 
 }

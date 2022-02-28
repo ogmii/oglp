@@ -15,7 +15,12 @@
             </ul>
         </div>
         <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="{{record.coverFront}}">
+            {{#record.hasCover}}
+                <img class="featurette-image img-fluid mx-auto" src="{{record.coverFront}}">
+            {{/record.hasCover}}
+            {{^record.hasCover}}
+                <img class="featurette-image img-fluid mx-auto" src="http://via.placeholder.com/600x600">
+            {{/record.hasCover}}
         </div>
     </div>
 </div>

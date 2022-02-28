@@ -54,6 +54,7 @@ class Record(
 		format = format.format,
 		coverFront = coverFront,
 		coverBack = coverBack,
+		hasCover = hasCover(),
 		label = label.name,
 		comment = comment,
 		variant = variant,

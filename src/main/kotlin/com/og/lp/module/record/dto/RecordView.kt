@@ -9,6 +9,7 @@ class RecordView(
 	private val format: String,
 	private val coverFront: String?,
 	private val coverBack: String?,
+	private val hasCover: Boolean = false,
 	private val label: String,
 	private val comment: String?,
 	private val variant: String?,

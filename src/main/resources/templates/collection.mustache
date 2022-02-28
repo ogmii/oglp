@@ -1,0 +1,22 @@
+{{> includes/head}}
+<style>
+    #my-chart.line {
+        height: 200px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+</style>
+<table class="charts-css line multiple" id="my-chart">
+
+    <tbody>
+    {{#data}}
+    <tr>
+        <td style="--size: calc( {{minimum}} / 100 )"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: calc( {{median}} / 100 )"> <span class="data"> $ 40K </span> </td>
+        <td style="--size: calc( {{maximum}} / 100 )"> <span class="data"> $ 40K </span> </td>
+    </tr>
+    {{/data}}
+    </tbody>
+
+</table>
+{{> includes/footer}}
